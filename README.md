@@ -13,7 +13,7 @@ Now the guests must come up with a strategy to let the Minotaur know that every 
 
 Create a program to simulate the winning strategy (protocol) where each guest is represented by one running thread. In your program you can choose a concrete number for N or ask the user to specify N at the start.
 
-### Solution description:
+### Solution compile and run:
 To solve this problem I wrote the code file bp.java.
 
 #### To compile and run this program:
@@ -26,6 +26,7 @@ prompt> javac bp.java
 ```
 prompt> java bp
 ```
+### Solution description:
 In the solution, the program prompts the user to enter the number of guests which would be used to create that number of threads.
 The solution is to have one lead thread that is responsible for keeping count of how many guests have entered the labyrinth, it does so by keeeping track of how cupcakes it has put back.
 The job of all the other threads is to only eat a cupcake once, they may be chosen to visit an arbitrary number of times but they only eat the cupcake once, after the lead thread reaches a count of the same number as guests, it terminates.
@@ -44,7 +45,7 @@ Which of these three strategies should the guests choose? Please discuss the adv
 
 Implement the strategy/protocol of your choice where each guest is represented by 1 running thread. You can choose a concrete number for the number of guests or ask the user to specify it at the start.
 
-### Solution description:
+### Solution compile and run+:
 To solve this problem I wrote the code file vase.java.
 
 #### To compile and run this program:
@@ -57,6 +58,7 @@ prompt> javac vase.java
 ```
 prompt> java vase
 ```
+### Solution description:
 I chose the third solution for this problem, the advantages of using a queue is that it organizes the threads while dealing with contention by having the threads enter on a first come first serve basis.
 
 So the solution starts by asking for a number of guests and a number of visits allowed, this prevents the program from running infinitly.
