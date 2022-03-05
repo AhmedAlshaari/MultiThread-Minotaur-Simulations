@@ -1,5 +1,5 @@
 # MultiThread-Minotaur-Simulations
-This repository consists of two projects that were required for Homework assignment 2.
+This repository consists of two projects that were required for Homework assignment 2. Every thread represents a quest. 
 
 ## Problem 1: Minotaur’s Birthday Party
 ### Problem description:
