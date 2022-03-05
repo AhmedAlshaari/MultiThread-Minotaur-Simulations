@@ -28,7 +28,7 @@ prompt> java bp
 ```
 ### Solution description:
 In the solution, the program prompts the user to enter the number of guests which would be used to create that number of threads.
-The solution is to have one lead thread that is responsible for keeping count of how many guests have entered the labyrinth, it does so by keeping track of how cupcakes it has put back.
+The solution is to have one lead thread that is responsible for keeping count of how many guests have entered the labyrinth, it does so by keeping track of how cupcakes have been eaten, this lead thread is the only thread that is allowed to request a new cupcake to be put out.
 The job of all the other threads is to only eat a cupcake once, they may be chosen to visit an arbitrary number of times but they only eat the cupcake once, after the lead thread reaches a count of the same number as guests, it terminates.
 
 ## Problem 2: Minotaur’s Crystal Vase 
@@ -60,7 +60,7 @@ prompt> java vase
 ```
 
 ### Solution description:
-I chose the third solution for this problem, the advantage of using a queue is that it organizes the threads while dealing with contention by having the threads enter on a first come first serve basis.
+I chose the third solution for this problem, the advantage of using a queue is that it organizes the threads while dealing with contention by having the threads enter on a first come first serve basis. The disadvantage is that the queue takes up extra space that the other methods don't need.
 
 So the solution starts by asking for the number of guests and a number of visits allowed, this prevents the program from running infinitely.
 One lead thread takes care of dequeuing the queue and taking visits, while every other thread tries to enter the queue for a chance to see the vase. After the number of visits has been reached, it terminates. 
