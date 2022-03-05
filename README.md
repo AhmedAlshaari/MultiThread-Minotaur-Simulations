@@ -30,7 +30,7 @@ prompt> java bp
 In the solution, the program prompts the user to enter the number of guests which would be used to create that number of threads.
 The solution is to have one lead thread that is responsible for keeping count of how many guests have entered the labyrinth, it does so by keeping track of how cupcakes it has put back.
 The job of all the other threads is to only eat a cupcake once, they may be chosen to visit an arbitrary number of times but they only eat the cupcake once, after the lead thread reaches a count of the same number as guests, it terminates.
-==================================================================================================================================
+
 ## Problem 2: Minotaur’s Crystal Vase 
 ### Problem description:
 The Minotaur decided to show his favorite crystal vase to his guests in a dedicated showroom with a single door. He did not want many guests to gather around the vase and accidentally break it. For this reason, he would allow only one guest at a time into the showroom. He asked his guests to choose from one of three possible strategies for viewing the Minotaur’s favorite crystal vase:
